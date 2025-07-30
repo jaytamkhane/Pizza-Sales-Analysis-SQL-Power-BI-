@@ -44,6 +44,8 @@ SELECT pizza_name, SUM(quantity) FROM pizza_sales GROUP BY pizza_name ORDER BY S
 -- Seating Utilization Estimation
 SELECT COUNT(DISTINCT order_id) * 4 / 60 * 100 AS seat_utilization FROM pizza_sales;
 ```
+---
+
 ## ✔️ Findings:
 
 - Thai Chicken → Highest revenue ($43.4K)
@@ -53,28 +55,51 @@ SELECT COUNT(DISTINCT order_id) * 4 / 60 * 100 AS seat_utilization FROM pizza_sa
 - Fridays & Saturdays → Busiest days
 - Seating utilization exceeded 190% on some days (based on 60-seat assumption)
 
+---
+
 ## 📊 Step 2: Power BI Dashboard
 I designed a 5-page dashboard to turn SQL insights into dynamic visuals:
 
 📁 Dashboard Pages:
 
-### 1️⃣ Overall Sales Summary  
+1️⃣ Overall Sales Summary  
 - 21.35K Orders | $817.86K Revenue | Avg Order Value: $38.31  
 - Highest sales in July | Fridays = busiest day  
-![Page 1 - Overall Summary](images/Dashboard/Page_1.png)
+![Page 1 - Overall Summary](Images/Dashboard/Page1.png)
 
+---
 
-2️⃣ Peak Hours & Weekday Trends
+2️⃣ Peak Hours & Weekly Demand  
+- Order spikes at 12 PM and 6–7 PM  
+- Friday & Saturday drive highest traffic  
+- Sundays = lowest volume → promotion opportunity  
+![Page 2 - Peak Hours](Images/Dashboard/Page2.png)
 
+---
 
-3️⃣ Pizza Performance
+### 3️⃣ Pizza Performance  
+- Top seller: Classic Deluxe (1.9K+ sold)  
+- Highest revenue: Thai Chicken ($43.4K)  
+- Low performer: Brie Carre (490 sold)  
+![Page 3 - Pizza Performance](Images/Dashboard/Page3.png)
 
+---
 
-4️⃣ Order Value Analysis
+### 4️⃣ Order Value & Revenue Analysis  
+- Most orders in $20–$40 range  
+- XXL pizzas have highest avg order value ($35.95)  
+- Q4 shows seasonal sales lift  
+![Page 4 - Order Value](Images/Dashboard/Page4.png)
 
+---
 
-5️⃣ Seating Utilization
+### 5️⃣ Seating Utilization & Operational Efficiency  
+- Seating over 99% utilized on average  
+- 269 days over 90% capacity  
+- Peak day hit 191.67% utilization → clear sign of overcrowding  
+![Page 5 - Seating Utilization](Images/Dashboard/Page5.png)
 
+---
 
 💡 Key Recommendations
 
@@ -84,6 +109,8 @@ I designed a 5-page dashboard to turn SQL insights into dynamic visuals:
 - Consider delivery/takeout-focused strategy on overcrowded days
 - Use weekday promotions to balance traffic (especially Sundays)
 
+---
+
 ## ⚙️ Tools Used
 
 - SQL (MySQL) – Data exploration & metric building
@@ -92,16 +119,11 @@ I designed a 5-page dashboard to turn SQL insights into dynamic visuals:
 - Power Query – Data cleaning & transformation
 - Excel – Dataset review and early exploration
 
-## 📁 Dataset
-Fictional pizza orders dataset with:
-
-Pizza name, size, category, Quantity, total price, Order date, time, seating logic (assumed 4 people per table, 60-seat capacity)
-
-(Dataset not included due to license, but similar datasets are available on Kaggle)
+---
 
 ## 🙋‍♂️ About Me
 I'm Jaykumar Tamkhane, a passionate data analyst who enjoys solving real business problems through data.
 This project helped me apply SQL and Power BI together—from logic to visualization—and taught me how to turn patterns into decisions.
 
-- 📩 Let’s connect on LinkedIn
-- 🌐 Portfolio: coming soon
+- 📩 Let’s connect on [LinkedIn](www.linkedin.com/in/jay-tamkhane)
+- 📩 Message Me on jaytamkhane161@gmail.com
