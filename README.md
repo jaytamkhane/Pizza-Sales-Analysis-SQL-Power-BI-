@@ -121,6 +121,18 @@ I designed a 5-page dashboard to turn SQL insights into dynamic visuals:
 
 ---
 
+## 📁 Data Structure: 
+
+```
+📁 data/                         # For raw or cleaned data
+📁 sql/                          # For all SQL scripts
+📁 powerbi/                      # Store `.pbix` file here
+📁 images/                       # Dashboard screenshots for README
+📄 LICENSE                       # Apache-2.0 license
+📄 README.md                     # Project overview and documentation
+```
+---
+
 ## 🙋‍♂️ About Me
 I'm Jaykumar Tamkhane, a passionate data analyst who enjoys solving real business problems through data.
 This project helped me apply SQL and Power BI together—from logic to visualization—and taught me how to turn patterns into decisions.
